@@ -1,6 +1,7 @@
 import express from 'express'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import authRoutes from './routes/authRoutes.js'
 
 const app = express()
 const PORT = process.env.PORT || 1234
@@ -20,6 +21,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 
 })
+
+// Routes
+app.use('/auth', authRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server has started on port: ${PORT}`)
