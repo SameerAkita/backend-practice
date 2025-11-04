@@ -1,0 +1,20 @@
+### GET /
+GET http://localhost:1234
+
+### register a user POST /AUTH/REGISTER
+POST http://localhost:1234/auth/register
+Content-Type: application/json
+
+{
+    "username": "",
+    "password": ""
+}
+
+### login a user POST /AUTH/LOGIN
+POST http://localhost:1234/auth/login
+Content-Type: application/json
+
+{
+    "username": "login",
+    "password": "password"
+}
